@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Notification</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="input">
+            <form>
+                <h3>Get email updates when:</h3>
+                <!--
+                <input type="checkbox" id="owner" />
+                <label for="owner">You're the owner</label><br />
+                <input type="checkbox" id="assignee" />
+                <label for="assignee">You're the assignee</label><br />
+                <input type="checkbox" id="reporter" />
+                <label for="reporter">You're the reporter</label><br>
+                <input type="checkbox" id="mention" />
+                <label for="mention">Someone mentions you</label><br>
+                <input type="checkbox" id="assigning" />
+                <label for="assigning">Someone is assigning you</label><br>
+-->
+                <div class="row">
+                    <label>
+                        <input type="checkbox">
+                        <span></span>
+                    </label>
+                    <p>You're the owner</p>
+                </div>
+                <div class="row">
+                    <label>
+                        <input type="checkbox">
+                        <span></span>
+                    </label>
+                    <p>You're the assignee</p>
+                </div>
+                <div class="row">
+                    <label>
+                        <input type="checkbox" checked>
+                        <span></span>
+                    </label>
+                    <p>You're the reporter</p>
+                </div>
+                <div class="row">
+                    <label>
+                        <input type="checkbox" checked>
+                        <span></span>
+                    </label>
+                    <p>Someone mentions you</p>
+                </div>
+                <div class="row">
+                    <label>
+                        <input type="checkbox">
+                        <span></span>
+                    </label>
+                    <p>Someone is assigning you</p>
+                </div>
+
+                <div class="para">
+                    <p>You may also recieve other email notifications your admin configured. <a href="#">Learn more</a></p>
+                </div>
+
+                <h3>Email format</h3>
+<!--
+                <input type="radio" id="html" name="format" />
+                <label for="html">HTML</label><br />
+                <input type="radio" id="text" name="format" />
+                <label for="text">Text</label><br>
+-->
+                  <div class="btn">
+                    <label>
+                        <input type="radio" name="format">
+                        <span></span>
+                    </label>
+                    <p>HTML</p>
+                </div>
+                  <div class="btn">
+                    <label>
+                        <input type="radio" name="format">
+                        <span></span>
+                    </label>
+                    <p>Text</p>
+                </div>
+
+                <button>Save</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

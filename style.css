@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: #381942;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    color: aliceblue;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    background: #36304a;
+    max-width: 370px;
+    padding: 20px;
+    height: 100vh;
+    border-radius: 5px;
+    position: absolute;
+    top: 20vh;
+}
+
+.input {
+    position: relative;
+    height: 100%;
+    top: -20vh;
+    background: #342838;
+    padding: 20px;
+    box-shadow: 7px 7px 5px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    /*    justify-content: space-between;*/
+    margin: 20px 0;
+    font-size: 24px;
+    text-align: left
+}
+
+.row p {
+    font-size: 16px;
+    margin: 0 8px;
+}
+
+form h3 {
+    text-align: left;
+    margin: 15px auto 5px;
+    font-size: 1.3em;
+}
+
+.row label {
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.row label span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 1px solid #bc00c6;
+    border-radius: 5px;
+    /*    background: purple;*/
+    cursor: pointer;
+}
+
+label span::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: background 0.5s;
+}
+
+input[type="checkbox"]:checked ~ span::before {
+    background: #bc00c6;
+}
+
+.row label span::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    bottom: 4px;
+    width: 0px;
+    height: 0px;
+    border: solid #fff;
+    border-width: 0 4px 4px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: width 0.5s, height 0.5s, opacity 0.5s;
+}
+
+input[type="checkbox"]:checked ~ span::after {
+    width: 10px;
+    height: 19px;
+    opacity: 1;
+    /*    background: purple;*/
+}
+.para{
+    margin-top: 30px;
+    padding: 13px;
+    background: rgba( 19, 15, 15, 0.767 );
+    border-radius: 5px;
+}
+.para p{
+    font-size: 13px;
+}
+.para p a{
+    text-decoration: underline;
+    color: #8a1290;
+}
+.btn {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    font-size: 24px;
+    text-align: left;
+}
+.btn p {
+    font-size: 16px;
+    margin: 0 8px;
+}
+.btn label {
+    position: relative;
+    width: 17px;
+    height: 17px;
+    border-radius: 0;
+}
+
+input[type="radio"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.btn label span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 1px solid #bc00c6;
+    /*    background: purple;*/
+    cursor: pointer;
+    border-radius: 50%;
+    overflow: hidden;
+}
+label span::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: background 0.5s;
+}
+
+input[type="radio"]:checked ~ span::before {
+    background: #bc00c6;
+}
+
+.btn label span::after {
+    content: '';
+    position: absolute;
+    left: 3px;
+    bottom: 3px;
+    width: 0px;
+    height: 0px;
+    border: solid #fff;
+    border-radius:50%;
+    transform: rotate(45deg);
+    background: #fff;
+    opacity: 0;
+    transition: width 0.5s, height 0.5s, opacity 0.5s;
+}
+
+input[type="radio"]:checked ~ span::after {
+   width: 3px;
+    height: 3px;
+    opacity: 1;
+    /*    background: purple;*/
+}
+button{
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px 10px;
+    background: #bc00c6;
+    color: #fff;
+    font-size: 1.2em;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    box-shadow: 7px 7px 7px 1px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: 0.5s;
+}
+button:hover{
+    background: #36304a;
+}
+@media screen and (max-width: 350px){
+    .para p{
+        font-size: 11px;
+    }
+}
+@media screen and (max-width: 330px){
+    .row{
+        margin: 10px 0;
+    }
+    .para{
+        margin-top: 10px;
+    }
+}
+@media screen and (max-width: 290px){
+    form h3{
+        font-size: 15px;
+    }
+    .row p{
+        font-size: 14px;
+    }
+    .btn p{
+        font-size: 14px;
+    }
+}
